@@ -1,0 +1,27 @@
+This Code Faker File
+
+$factory->define(Empolyee::class, function (Faker $faker) {
+    return [
+        'name' => $faker->name,
+        'email' => $faker->unique()->safeEmail,
+        'phone_number' => $faker->phoneNumber,
+        'photo' => $faker->imageUrl($width = 300, $height = 250),
+        'nid_photo' => $faker->imageUrl($width = 300, $height = 250),
+        'present_address' => $faker->address,
+        'permanent_address' => $faker->address,
+        'experience' => rand(1,5),
+        'vacation' => rand(1,10),
+        'salary' => rand(10000, 25000),
+    ];
+});
+
+
+Then Open DatabaseSeeder File...
+
+factory(\App\Model\Customer::class,30)->create();
+
+Then Open Terminal or Git Bash
+
+Type This Code ON Terminal or Git Bash..
+
+php artisan db:seed
