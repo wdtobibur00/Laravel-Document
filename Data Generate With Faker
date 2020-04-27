@@ -1,4 +1,6 @@
-This Code Faker File
+This Code Faker File...
+
+Faker Document Link: https://github.com/fzaninotto/Faker
 
 $factory->define(Empolyee::class, function (Faker $faker) {
     return [
@@ -25,3 +27,6 @@ Then Open Terminal or Git Bash
 Type This Code ON Terminal or Git Bash..
 
 php artisan db:seed
+
+
+
